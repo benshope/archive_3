@@ -1,184 +1,151 @@
-[Google App Engine Boilerplate](http://appengine.beecoss.com) [![Build Status](https://secure.travis-ci.org/coto/gae-boilerplate.png)](http://travis-ci.org/coto/gae-boilerplate)
-==============================
+# angular-seed — the seed for AngularJS apps
 
-Sponsored by <a href="http://www.jetbrains.com/pycharm/" alt="Download PyCharm">
-  <img src="http://www.jetbrains.com/img/logos/pycharm_logo142x29.gif">
-</a>
+This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
+You can use it to quickly bootstrap your angular webapp projects and dev environment for these
+projects.
 
-Google App Engine Boilerplate gets your project off the ground quickly using the Google App Engine platform. 
-Create powerful applications by using the latest technology supported on Google App Engine. 
-It will introduces new developers to App Engine and advanced developers to follow best practices.
+The seed contains AngularJS libraries, test libraries and a bunch of scripts all preconfigured for
+instant web development gratification. Just clone the repo (or download the zip/tarball), start up
+our (or yours) webserver and you are ready to develop and test your application.
 
-[Try a online demo](http://appengine.beecoss.com)
+The seed app doesn't do much, just shows how to wire two controllers and views together. You can
+check it out by opening app/index.html in your browser (might not work file `file://` scheme in
+certain browsers, see note below).
 
-What's a Boilerplate?
----------------------
-A Boilerplate is used to describe sections of code that can be reused over and over in new contexts or applications which provides good default values, reducing the need to specify program details in every project. ([wikipedia](http://en.wikipedia.org/wiki/Boilerplate_code))
-
-What makes this Boilerplate Amazing?
-------------------------------------
-It is fully featured, actively maintained, and uses the latest and most supported technologies of Google App Engine.
-
-New to Google App Engine? Learn about it by watching [this video](http://www.youtube.com/watch?v=bfgO-LXGpTM) or reading [this website](https://developers.google.com/appengine/).
-
-Get started in just a few easy steps
-------------------------------------
-1. Download the last version of the [App Engine SDK](http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Python) for Linux, Mac OS or Windows (Tested with SDK version 1.7.4).
-1. Download the code of this Boilerplate ([here](https://github.com/coto/gae-boilerplate/zipball/master))
-1. Run locally ([instructions](https://developers.google.com/appengine/docs/python/tools/devserver)).
-1. Set your 'application' name in [app.yaml](https://github.com/coto/gae-boilerplate/blob/master/app.yaml)
-1. Set custom config parameters in [config/localhost.py](https://github.com/coto/gae-boilerplate/blob/master/config/localhost.py).  (secret key, [recaptcha code](http://www.google.com/recaptcha/whyrecaptcha), salt etc.)  To get started, copy the default settings from [boilerplate/config.py](https://github.com/coto/gae-boilerplate/blob/master/boilerplate/config.py). . Note that most of the default settings will need to be changed to yield a secure and working application.  Make the changes to these settings in the config/*.py (localhost.py for development on your local PC, production.py for production on App Engine's servers, testing.py for unittests configurations)  The configurations in /config take precedence over boilerplate/config.py.
-1. Set Authentication Options dropdown to Federated Login in the Google App Engine control panel (or if you do not want federated login, set enable_federated_login to false in config.py)
-1. Deploy it online ([instructions](https://developers.google.com/appengine/docs/python/gettingstarted/uploading) - recommended setup: python 2.7, high replication datastore)
-
-Please note that boilerplate code is located in the boilerplate module while your custom application code should be located in the web module.
-The intention is that separating the boilerplate code from your application code will avoid merge conflicts as you keep up with future boilerplate changes.
-Settings, code, and templates in the root [config.py](https://github.com/coto/gae-boilerplate/blob/master/config.py), web module, and templates directory take precedence over the equivalent files in the boilerplate module.
-
-Functions and features:
------------------------
-+ Authentication (Login, Logout, Sign Up)
-+ Federated Login - login via your favorite social network (Google, Twitter, etc...) powered by OpenID and OAuth
-+ Reset Password
-+ Update User Profile
-+ Contact Form
-+ Client side and server side form validation
-+ Automatic detection of user language
-+ Support for 8 Languages (English, Spanish, Italian, French, Chinese, Indonesian, German and Russian)
-+ Visitors Log
-+ Notifications and Confirmation for users when they change their email or password
-+ Responsive Design for viewing on PCs, tablets, and mobile phones (synchronized with Twitter-Bootstrap project)
-+ Mobile identification
-+ Unit testing
-+ Error handling
-+ Basic user management features available under /admin/users/ for Google Application Administrators
+_Note: While angular is client-side-only technology and it's possible to create angular webapps that
+don't require a backend server at all, we recommend hosting the project files using a local
+webserver during development to avoid issues with security restrictions (sandbox) in browsers. The
+sandbox implementation varies between browsers, but quite often prevents things like cookies, xhr,
+etc to function properly when an html page is opened via `file://` scheme instead of `http://`._
 
 
-Resources
----------
-Boilerplate has a Google group ([gae-boilerplate](https://groups.google.com/forum/?fromgroups#!forum/gae-boilerplate)) for discussions and a Twitter account ([@gaeboilerplate](http://twitter.com/gaeboilerplate/)) for sharing related resources.
+## How to use angular-seed
 
-Open Source
------------
-If you want to add, fix or improve something, create an [issue](https://github.com/coto/gae-boilerplate/issues) or send a [Pull Request](https://github.com/coto/gae-boilerplate/pull/new/master).
+Clone the angular-seed repository and start hacking...
 
-Before committing fixes we recommend running the unitests (in the boilerplate package).  This will help guard against changes that accidently break other code.  See the testing section below for instructions.
 
-Feel free to commit improvements or new features. Feedback, comments and ideas are welcome.
+### Running the app during development
 
-Testing
--------
-**Unit testing**
-+ Unit tests can be run via [testrunner](https://github.com/coto/gae-boilerplate/blob/master/testrunner.py) or in Eclipse by right clicking on the web folder and selecting run as... Python unit-test.
-+ You may need to add /boilerplate/external to your python path.
-+ Please add unittests for your application to [unittests](https://github.com/coto/gae-boilerplate/tree/master/web/tests).
-+ To run unittests it may be necessary to install [webtest](http://webtest.pythonpaste.org/en/latest/index.html#installation), [mock](http://www.voidspace.org.uk/python/mock/), and [pyquery](http://packages.python.org/pyquery/) in your local python installation.
-+ Your own unittests can be created similarly to those in the boilerplate.  Inheriting from boilerplate.lib.test_helpers.HandlerHelpers will provide access to convenient handler testing methods used by the boilerplate.
+You can pick one of these options:
 
-Technologies used
------------------
-+ Python 2.7.3
-+ [NDB 1.0.5](http://developers.google.com/appengine/docs/python/ndb/) (The best datastore API for the Google App Engine Python runtime).
-+ [Jinja2 2.6](http://jinja.pocoo.org/docs/) (A fully featured template engine for Python).
-+ [WTForms-1.0.2](http://wtforms.simplecodes.com/) (Forms validation framework keeping user interaction secure and flexible with or without javascript).
-+ [Babel-0.9.6](http://babel.edgewall.org/) and [gaepytz-2011h](http://code.google.com/p/gae-pytz/) (Industy standard internationalization renders the site in multiple languages).
-+ [webapp2 2.5.2](http://webapp-improved.appspot.com/) (A lightweight Python web framework, the most compatible with Google App Engine).
-    + webapp2_extras.sessions
-    + webapp2_extras.routes
-    + webapp2_extras.auth
-    + webapp2_extras.i18n
-+ Code written following the [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html)
-+ Unit testing with [unittest](http://docs.python.org/library/unittest.html), [webtest](http://webtest.pythonpaste.org/en/latest/index.html), [pyquery](http://packages.python.org/pyquery/)
-+ OpenID library provided by Google App Engine
-+ OAuth2 for federated login providers that do not support OpenID
+* serve this repository with your webserver
+* install node.js and run `scripts/web-server.js`
 
-Front-end Technologies
-----------------------
-+ [HTML5Boilerplate](http://html5boilerplate.com/)
-+ [Modernizr 2.6.1](http://modernizr.com)
-+ [jQuery 1.8.2](http://jquery.com)
-+ [Twitter Bootstrap 2.2.1](http://twitter.github.com/bootstrap/) Template for Desktop Version.
+Then navigate your browser to `http://localhost:<port>/app/index.html` to see the app running in
+your browser.
 
-Please help us translate and add new languages!
------------------------------------------------
-In each locale/<locale code>/LC_MESSAGES directory there is a file messages.po. Please help us translate the text in these files.
-msgid is the text in English.  msgstr is the translation to the language indicated by the locale code.  For example:
 
-<tt>msgid "Change your password"</tt>
+### Running the app in production
 
-<tt>msgstr "Cambiar tu contraseña"</tt>
+This really depends on how complex is your app and the overall infrastructure of your system, but
+the general rule is that all you need in production are all the files under the `app/` directory.
+Everything else should be omitted.
 
-Working with Internationalization (i18n)
-----------------------------------------
-This boilerplate comes bundled with babel, pytz, and automatic language detection which together provide powerful internationalization capability.
-Text to be translated needs to be indicated in code and then translated by users like you after which it is compiled for speed.
+Angular apps are really just a bunch of static html, css and js files that just need to be hosted
+somewhere, where they can be accessed by browsers.
 
-Adding or updating text to be translated or adding new languages requires more work as indicated in the steps below:
+If your Angular app is talking to the backend server via xhr or other means, you need to figure
+out what is the best way to host the static files to comply with the same origin policy if
+applicable. Usually this is done by hosting the files by the backend server or through
+reverse-proxying the backend server(s) and a webserver(s).
 
-1. Text to be translated should be enclosed in `_("text to translate")` in *.py files.
-   + `{{..._("text to translate")...}}`
-   + `{%..._("text to translate")...%}`
-1. In html templates translated text is indicated by:
-   + `{% trans %}text to translate{% endtrans %}`
-   
-   **NOTE:** Translations can be added to other types of files too.  See [babel.cfg](https://github.com/coto/gae-boilerplate/blob/master/locale/babel.cfg)
-   and [babel.cfg documentation](http://babel.edgewall.org/wiki/Documentation/0.9/messages.html)
-1. Obtain pybabel to perform the steps below.  You will need to install and compile [jinja2](http://jinja.pocoo.org/docs/) and [babel](http://babel.edgewall.org/wiki/Download).
-   Note that you may need to first install [setuptools and easy_install](http://pypi.python.org/pypi/setuptools).
-   pybabel.exe can be run from the Scripts directory in your python installation.
-   * `easy_install jinja2 babel`
-1. Babel then needs to find all translationed text blocks throughout code and templates.
-   After installing pybabl run this command to extract messages (assuming ./ is the location of this boilerplate):
-   <tt>pybabel extract -F ./locale/babel.cfg -o ./locale/messages.pot ./ --sort-output --no-location --omit-header</tt>
-1. Update translations of existing languages or add new languages
-   1. Update translations of existing languages by running this command for each locale:
-      <tt>pybabel update -l es_ES -d ./locale -i ./locale/messages.pot --previous --ignore-obsolete</tt>
-      Run this command for each locale by replacing es_ES in the command.  Locale names are the directory names in ./locale.
-   1. Add new languages
-      Run this command for each new language to add.  You will need to replace es_ES in the command with the locale code to add:
-      <tt>pybabel init -l es_ES -d ./locale -i ./locale/messages.pot</tt>
-      Add the locale to the locales array in [config.py](https://github.com/coto/gae-boilerplate/blob/master/boilerplate/config.py).  Instructions on how to pick a locale code are provided in the comments above the array.
-1. Provide translations for each language
-   In each locale/<locale code>/LC_MESSAGES directory there is a file messages.po.  Users translate the strings in these files.
-   msgid is the text in English.  msgstr is the translation to the language indicated by the locale code.  For example:
-   + `msgid "Change your password"`
-   + `msgstr "Cambiar tu contraseña"`
-1. Compile translations
-   Run: <tt>pybabel compile -f -d ./locale</tt>
 
-See [webapp2's tutorial](http://webapp-improved.appspot.com/tutorials/i18n.html) and [pybabel's docs](http://babel.edgewall.org/wiki/Documentation/cmdline.html) for more details.
+### Running unit tests
 
-**Disabling i18n**
-i18n can be disabled and language options hidden.  Set locales in config.py to None or empty array [] to do this.  This may be useful to provide a performance boost or simplify sites that serve a market with only one language.
-The locale directory can be safely removed to save space if not needed but the babel and pytz directories cannot be removed without breaking code (imports and trans statements) at this time.
+We recommend using [jasmine](http://pivotal.github.com/jasmine/) and
+[Testacular](http://vojtajina.github.com/testacular/) for your unit tests/specs, but you are free
+to use whatever works for you.
 
-Security
---------
-**SSL**
-+ SSL is enabled site wide by adding <tt>secure: always</tt> to the section: <tt>- url: /.*</tt> in app.yaml (remove this line to disable)
-+ SSL either requires a free google app engine *.appspot.com domain or a [custom domain and certificate](https://developers.google.com/appengine/docs/ssl)
-+ Alternatively SSL can be enabled at a controller level via webapp2 schemes. Use the secure_scheme provided in routes.py
-+ It is recommended to enable ssl site wide to help prevent [session hijacking](http://en.wikipedia.org/wiki/Session_hijacking)
+Requires [node.js](http://nodejs.org/), Testacular (`sudo npm install -g testacular`) and a local
+or remote browser.
 
-**Passwords**
-+ passwords encrypted with SHA512 and PyCrypto
+* start `scripts/test.sh` (on windows: `scripts\test.bat`)
+  * a browser will start and connect to the Testacular server (Chrome is default browser, others can be captured by loading the same url as the one in Chrome or by changing the `config/testacular.conf.js` file)
+* to run or re-run tests just change any of your source or test javascript files
 
-**CSRF**
-+ [Cross-site request forgery](http://en.wikipedia.org/wiki/Cross-site_request_forgery) protection
 
-Acknowledgements
-----------------
-Google App Engine Boilerplate is a collaborative project created by [coto](https://github.com/coto) which is bringing to you thanks to the help of
-these [amazing people](https://github.com/coto/gae-boilerplate/graphs/contributors?type=a)
+### End to end testing
 
-**Top 10: Primary contributors:**
-+ [Tmeryu](https://github.com/tmeryu)
-+ [Peta15](https://github.com/peta15)
-+ [Sergue1](https://github.com/sergue1)
-+ [Sabirmostofa](https://github.com/sabirmostofa)
-+ [Pmanacas](https://github.com/pmanacas)
-+ [copycat91](https://github.com/copycat91)
-+ [Mooose](https://github.com/mooose)
-+ [f1shear](https://github.com/f1shear)
-+ [presveva](https://github.com/presveva)
-+ [Sorced-Jim](https://github.com/sorced-Jim)
+Angular ships with a baked-in end-to-end test runner that understands angular, your app and allows
+you to write your tests with jasmine-like BDD syntax.
+
+Requires a webserver, node.js + `./scripts/web-server.js` or your backend server that hosts the angular static files.
+
+Check out the
+[end-to-end runner's documentation](http://docs.angularjs.org/guide/dev_guide.e2e-testing) for more
+info.
+
+* create your end-to-end tests in `test/e2e/scenarios.js`
+* serve your project directory with your http/backend server or node.js + `scripts/web-server.js`
+* to run do one of:
+  * open `http://localhost:port/test/e2e/runner.html` in your browser
+  * run the tests from console with [Testacular](vojtajina.github.com/testacular) via
+    `scripts/e2e-test.sh` or `script/e2e-test.bat`
+
+### Continuous Integration
+
+CloudBees have provided a CI/deployment setup:
+
+<a href="https://grandcentral.cloudbees.com/?CB_clickstart=https://raw.github.com/CloudBees-community/angular-js-clickstart/master/clickstart.json"><img src="https://d3ko533tu1ozfq.cloudfront.net/clickstart/deployInstantly.png"/></a>
+
+If you run this, you will get a cloned version of this repo to start working on in a private git repo, 
+along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
+
+### Receiving updates from upstream
+
+When we upgrade angular-seed's repo with newer angular or testing library code, you can just
+fetch the changes and merge them into your project with git.
+
+
+## Directory Layout
+
+    app/                --> all of the files to be used in production
+      css/              --> css files
+        app.css         --> default stylesheet
+      img/              --> image files
+      index.html        --> app layout file (the main html template file of the app)
+      index-async.html  --> just like index.html, but loads js files asynchronously
+      js/               --> javascript files
+        app.js          --> application
+        controllers.js  --> application controllers
+        directives.js   --> application directives
+        filters.js      --> custom angular filters
+        services.js     --> custom angular services
+      lib/              --> angular and 3rd party javascript libraries
+        angular/
+          angular.js        --> the latest angular js
+          angular.min.js    --> the latest minified angular js
+          angular-*.js      --> angular add-on modules
+          version.txt       --> version number
+      partials/             --> angular view partials (partial html templates)
+        partial1.html
+        partial2.html
+
+    config/testacular.conf.js        --> config file for running unit tests with Testacular
+    config/testacular-e2e.conf.js    --> config file for running e2e tests with Testacular
+
+    scripts/            --> handy shell/js/ruby scripts
+      e2e-test.sh       --> runs end-to-end tests with Testacular (*nix)
+      e2e-test.bat      --> runs end-to-end tests with Testacular (windows)
+      test.bat          --> autotests unit tests with Testacular (windows)
+      test.sh           --> autotests unit tests with Testacular (*nix)
+      web-server.js     --> simple development webserver based on node.js
+
+    test/               --> test source files and libraries
+      e2e/              -->
+        runner.html     --> end-to-end test runner (open in your browser to run)
+        scenarios.js    --> end-to-end specs
+      lib/
+        angular/                --> angular testing libraries
+          angular-mocks.js      --> mocks that replace certain angular services in tests
+          angular-scenario.js   --> angular's scenario (end-to-end) test runner library
+          version.txt           --> version file
+      unit/                     --> unit level specs/tests
+        controllersSpec.js      --> specs for controllers
+        directivessSpec.js      --> specs for directives
+        filtersSpec.js          --> specs for filters
+        servicesSpec.js         --> specs for services
+
+## Contact
+
+For more information on AngularJS please check out http://angularjs.org/
