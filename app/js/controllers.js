@@ -5,9 +5,7 @@
 
 function HomeController() {}
 
-HomeController.$inject = ['$scope','$http',function($scope, $http) {
-    google.load('visualization', '1.0', {'packages':['corechart']});
-}];
+HomeController.$inject = ['$scope','$http'];
 
 
 function AboutController() {}
