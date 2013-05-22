@@ -8,3 +8,5 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives'])
     $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: AboutController});
     $routeProvider.otherwise({redirectTo: '/home'});
   }]);
+
+  google.load('visualization', '1', {packages: ['corechart']});
