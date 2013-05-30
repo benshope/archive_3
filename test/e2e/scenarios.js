@@ -9,19 +9,19 @@ describe('my app', function() {
   });
 
 
-  it('should automatically redirect to /home when location hash/fragment is empty', function() {
-    expect(browser().location().url()).toBe("/home");
+  it('should automatically redirect to /view1 when location hash/fragment is empty', function() {
+    expect(browser().location().url()).toBe("/view1");
   });
 
 
-  describe('home', function() {
+  describe('view1', function() {
 
     beforeEach(function() {
-      browser().navigateTo('#/home');
+      browser().navigateTo('#/view1');
     });
 
 
-    it('should render home when user navigates to /home', function() {
+    it('should render view1 when user navigates to /view1', function() {
       expect(element('[ng-view] p:first').text()).
         toMatch(/partial for view 1/);
     });
@@ -29,14 +29,14 @@ describe('my app', function() {
   });
 
 
-  describe('about', function() {
+  describe('view2', function() {
 
     beforeEach(function() {
-      browser().navigateTo('#/about');
+      browser().navigateTo('#/view2');
     });
 
 
-    it('should render about when user navigates to /about', function() {
+    it('should render view2 when user navigates to /view2', function() {
       expect(element('[ng-view] p:first').text()).
         toMatch(/partial for view 2/);
     });

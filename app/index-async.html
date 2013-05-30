@@ -40,37 +40,18 @@
       angular.bootstrap(document, ['myApp']);
     });
   </script>
-  <title>Ethicizer</title>
+  <title>My AngularJS App</title>
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body ng-cloak>
-  <div id="page">
-    <div class="container">
-      <div class="masthead">
+  <ul class="menu">
+    <li><a href="#/view1">view1</a></li>
+    <li><a href="#/view2">view2</a></li>
+  </ul>
 
-        <div class="brand" href="/">
-          <img style="margin: -3px 10px 0px 0px;" src="/img/logo.png" alt="">
-          <h3 class="muted">Ethicizer</h3>
-        </div>
+  <div ng-view></div>
 
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#/home">Home</a></li>
-          <li><a href="#/about">About</a></li>
-        </ul>
-      </div>
-    </div>
+  <div>Angular seed app: v<span app-version></span></div>
 
-    <div class="container">
-      <div ng-view></div>
-    </div>
-
-    <hr>
-    <footer>
-        <div class="container">
-        <p class="pull-right"><a href="#">Back to Top</a></p>
-        <p>&copy; Ethicizer &middot; <a href="#/about">About</a></p>
-        </div>
-    </footer>
-  </div>
 </body>
 </html>

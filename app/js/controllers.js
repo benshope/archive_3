@@ -3,11 +3,10 @@
 /* Controllers */
 
 
-function HomeController() {}
+function MyCtrl1() {}
+MyCtrl1.$inject = [];
 
-HomeController.$inject = ['$scope','$http'];
 
-
-function AboutController() {}
-
-AboutController.$inject = [];
+function MyCtrl2() {
+}
+MyCtrl2.$inject = [];
