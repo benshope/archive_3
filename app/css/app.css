@@ -17,130 +17,82 @@ dt,dd {
 
 
 
-    /* GLOBAL STYLES
-    -------------------------------------------------- */
-    /* Padding below the footer and lighter body text */
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
 
-    body {
-      padding-bottom: 20px;
-      padding-top: 50px;
-      color: #5a5a5a;
-      /*background: #f7f7f7 url(../img/old_wall.png) repeat center top;*/
-      /*INFOGRAPHIC:  http://files.www.newmediacampaigns.com/political-infographic.JPG*/
-      background: url(http://files.www.newmediacampaigns.com/political-infographic.JPG) no-repeat center center fixed;
-      background-size: cover;
-    }
-
-
-
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
-
-    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-    .navbar-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      margin-top: 20px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-    }
-
-    /* Downsize the brand/project name a bit */
-    .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
-      padding: 15px 20px;
-    }
-
-    /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
-      margin-top: 10px;
-    }
+body {
+  padding-bottom: 20px;
+  padding-top: 100px;
+  color: #5a5a5a;
+  /*background: #f7f7f7 url(../img/old_wall.png) repeat center top;*/
+  /*INFOGRAPHIC:  http://files.www.newmediacampaigns.com/political-infographic.JPG*/
+  background: url(http://us.123rf.com/400wm/400/400/tar07/tar071208/tar07120800089/14781648-blue-sky-background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+footer {
+  margin-top: 20px;
+}
 
 
-    /* RESPONSIVE CSS
-    -------------------------------------------------- */
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
 
-    @media (max-width: 979px) {
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 20px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
 
-      .container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
-      }
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
-      }
+/* Downsize the brand/project name a bit */
+.navbar .brand {
+  padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+  font-size: 16px;
+  font-weight: bold;
+}
 
-      .featurette {
-        height: auto;
-        padding: 0;
-      }
-      .featurette-image.pull-left,
-      .featurette-image.pull-right {
-        display: block;
-        float: none;
-        max-width: 40%;
-        margin: 0 auto 20px;
-      }
-    }
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+  padding: 15px 20px;
+}
 
-
-    @media (max-width: 767px) {
-
-      .navbar-inner {
-        margin: -20px;
-      }
-
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
-
-      }
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 18px;
-      }
-
-      .marketing .span4 + .span4 {
-        margin-top: 40px;
-      }
-
-      .featurette-heading {
-        font-size: 30px;
-      }
-      .featurette .lead {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-
-    }
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+  margin-top: 10px;
+}
 
 
-    /* FIXED SIDEBAR CSS
-    -------------------------------------------------- */
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 979px) {
+
+  .container.navbar-wrapper {
+    margin-bottom: 0;
+    width: auto;
+  }
+  .navbar-inner {
+    border-radius: 0;
+    margin: -20px 0;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .navbar-inner {
+    margin: -20px;
+  }
+
+}
+
+
+/* FIXED SIDEBAR CSS
+-------------------------------------------------- */
 
 .sidebar-nav-fixed {
     padding: 9px 0;
@@ -251,12 +203,4 @@ dt,dd {
     -moz-box-shadow: -4px 0px 3px -2px #ddd;
     box-shadow: -4px 0px 3px -2px #ddd;
     cursor: pointer;
-}
-
-#page {
-  padding-top: 50px;
-}
-
-footer {
-  margin-top: 20px;
 }
