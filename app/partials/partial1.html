@@ -1,1 +1,19 @@
-<p>This is the partial for view 1.</p>
+
+<div class="row-fluid">
+  <div id="search-box-inset">
+    <div id="search-box-wrapper">
+      <div id='search-box'>
+        <form action='/search' id='search-form' method='get' target='_top'>
+          <input id='search-text' name='q' class="" ng-model="companyName" placeholder='Company Name' type='text'/>
+          <button id='search-button' type='submit'><span>Search</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hero-unit">
+  <h1 ng-hide="companyName">Vote with your wallet.</h1>
+  <h1 ng-show="companyName">Company: {{companyName}}</h1>
+  <p ng-show="companyName">Lots and lots and lots and lots of data about the company.</p>
+</div>
