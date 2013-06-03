@@ -27,8 +27,8 @@ body {
   color: #5a5a5a;
   /*background: #f7f7f7 url(../img/old_wall.png) repeat center top;*/
   /*INFOGRAPHIC:  http://files.www.newmediacampaigns.com/political-infographic.JPG*/
-  background: url(http://us.123rf.com/400wm/400/400/tar07/tar071208/tar07120800089/14781648-blue-sky-background.jpg) no-repeat center center fixed;
-  background-size: cover;
+  /*background: url(http://us.123rf.com/400wm/400/400/tar07/tar071208/tar07120800089/14781648-blue-sky-background.jpg) no-repeat center center fixed;*/
+  /*background-size: cover;*/
 }
 footer {
   margin-top: 20px;
