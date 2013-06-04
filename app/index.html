@@ -22,6 +22,7 @@
 
   <div id="page" class="container">
 
+  <!-- TOP NAVIGATION BAR -->
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -39,12 +40,13 @@
       </div>
     </div>
 
+    <!-- SEARCH BAR -->
     <div class="row-fluid">
       <div id="search-box-inset">
         <div id="search-box-wrapper">
           <div id='search-box'>
             <form action='/search' id='search-form' method='get' target='_top'>
-              <input id='search-text' name='q' class="" ng-model="companyName" placeholder='Company Name' type='text'/>
+              <input id='search-text' name='q' class="" ng-model="query" placeholder='Company Name' type='text'/>
               <button id='search-button' type='submit'><span>Search</span></button>
             </form>
           </div>
@@ -53,11 +55,21 @@
     </div>
 
     <div class="hero-unit">
-      <pie-chart data="chartData" title="{{chartTitle}}"
-          width="{{chartWidth}}" height="{{chartHeight}}"
-          select="selectRow(selectedRowIndex)"></pie-chart>
-      <br/>
-      Data: {{chartData}}
+      SELECTED COMPANY: {{query}}
+      <!-- PIE CHART -->
+      <pie-chart data="chartData" width="{{chartWidth}}" height="{{chartHeight}}" select="selectRow(selectedRowIndex)"></pie-chart><br/>
+      ALL COMPANIES:
+      <ul>
+        <li ng-repeat="company in companies | filter:query">
+          {{company.name}}
+          <p>{{company.snippet}}</p>
+        </li>
+      </ul>
+
+<!--       <h4>Chart Info</h4>
+      Width: <input ng-model="chartWidth"><br/>
+      Height: <input ng-model="chartHeight"><br/>
+      Data: {{chartData}} -->
     </div>
   </div>
 
