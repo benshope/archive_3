@@ -3,7 +3,7 @@
 /* Controllers */
 
 
-function Ctrl($scope) {
+function Ctrl($scope, $http) {
     $scope.chartTitle = "Company Name";
     $scope.chartWidth = 500;
     $scope.chartHeight = 320;
@@ -26,6 +26,6 @@ function Ctrl($scope) {
     };
 
     $scope.companies = $http.get('companies/companies.json').success(function(data) {
-    $scope.phones = data;
-  });;
+        $scope.companies = data;
+    });
 }

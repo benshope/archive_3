@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Apple",
+        "snippet": "Cool company",
+        "data": [40,60]
+    },
+    {
+        "name": "Google",
+        "snippet": "Cool company",
+        "data": [20,80]
+    },
+    {
+        "name": "Twitter",
+        "snippet": "Cool company",
+        "data": [30,70]
+    },
+    {
+        "name": "Amazon",
+        "snippet": "Cool company",
+        "data": [0,100]
+    },
+    {
+        "name": "Vimeo",
+        "snippet": "Cool company",
+        "data": [20,80]
+    },
+    {
+        "name": "Pinterest",
+        "snippet": "Cool company",
+        "data": [5,95]
+    },
+    {
+        "name": "Skype",
+        "snippet": "Cool company",
+        "data": [20,80]
+    },
+    {
+        "name": "Facebook",
+        "snippet": "Cool company",
+        "data": [25,75]
+    },
+    {
+        "name": "Yahoo",
+        "snippet": "Cool company",
+        "data": [60,40]
+    }
+]
