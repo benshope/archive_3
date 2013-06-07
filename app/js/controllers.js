@@ -3,7 +3,7 @@
 /* Controllers */
 
 
-function Ctrl($scope, $http) {
+function CompaniesCtrl($scope, $http) {
     $scope.chartTitle = "Company Name";
     $scope.chartWidth = 500;
     $scope.chartHeight = 320;
@@ -25,7 +25,11 @@ function Ctrl($scope, $http) {
     return ($scope.selected === index) ? "selected" : "";
     };
 
-    $scope.companies = $http.get('companies/companies.json').success(function(data) {
+    $http.get('companies/companies.json').success(function(data) {
         $scope.companies = data;
     });
+}
+
+function CompanyCtrl($scope, $routeParams) {
+  $scope.companyId = $routeParams.companyId;
 }

@@ -1,0 +1,31 @@
+
+<!-- SEARCH BAR -->
+<div class="row-fluid">
+  <div id="search-box-inset">
+    <div id="search-box-wrapper">
+      <div id='search-box'>
+        <form action='/search' id='search-form' method='get' target='_top'>
+          <input id='search-text' name='q' style="width:100%;" ng-model="query" placeholder='Company Name' type='text'/>
+          <button id='search-button' type='submit'><span>Search</span></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- COMPANIES LIST -->
+<div class="row-fluid">
+  <div ng-animate="'animate'" ng-repeat="company in companies | filter:query" class="span4">
+    <img ng-src="{{company.imageUrl}}">
+    <a href="#/companies/{{company.name}}"><h2>{{company.name}}</h2></a>
+    <p>{{company.snippet }}</p>
+    <p><a class="btn" href="#">View details »</a></p>
+  </div>
+</div>
+
+<!-- PIE CHART -->
+<div class="hero-unit" ng-show="query">
+  SELECTED COMPANY: {{query}}
+  <pie-chart data="chartData" width="{{chartWidth}}" height="{{chartHeight}}" select="selectRow(selectedRowIndex)"></pie-chart><br/>
+</div>

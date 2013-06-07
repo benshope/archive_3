@@ -1,46 +1,55 @@
 [
     {
         "name": "Apple",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [40,60]
     },
     {
         "name": "Google",
+        "imageUrl": "img/logos/Google.jpg",
         "snippet": "Cool company",
         "data": [20,80]
     },
     {
         "name": "Twitter",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [30,70]
     },
     {
         "name": "Amazon",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [0,100]
     },
     {
         "name": "Vimeo",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [20,80]
     },
     {
         "name": "Pinterest",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [5,95]
     },
     {
         "name": "Skype",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [20,80]
     },
     {
         "name": "Facebook",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [25,75]
     },
     {
         "name": "Yahoo",
+        "imageUrl": "img/logos/Apple.jpg",
         "snippet": "Cool company",
         "data": [60,40]
     }

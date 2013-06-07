@@ -1,7 +1,7 @@
 <!doctype html>
 
-<html>
-  <head lang="en" ng-app="myApp">
+<html lang="en" ng-app="myApp">
+  <head lang="en">
     <meta charset="utf-8">
     <title>Ethicizer</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" />
@@ -9,7 +9,6 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
     <script type="text/javascript" src="http://www.google.com/jsapi?ext.js"></script>
-    <script> document.write('<base href="' + document.location + '" />'); </script>
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>
@@ -17,104 +16,32 @@
     <script src="js/directives.js"></script>
   </head>
 
+  <body>
 
-  <body ng-controller="Ctrl">
-
-  <div id="page" class="container">
-
-  <!-- TOP NAVIGATION BAR -->
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">
-            <img style="margin: -3px 10px 0px 0px;" src="/img/logo.png" alt=""> Ethicizer
-          </a>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              <li><a href="#/">Home</a></li>
-              <li class="active"><a href="#/about">About</a></li>
-              <li><a href="#/contact">Contact</a></li>
-            </ul>
+    <div id="page">
+      <!-- TOP NAVIGATION BAR -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a class="brand" href="/">
+              <img style="margin: -3px 10px 0px 0px;" src="/img/logo.png" alt=""> Ethicizer
+            </a>
+            <div class="nav-collapse collapse">
+              <ul class="nav pull-right">
+                <li><a href="#/">Home</a></li>
+                <li class="active"><a href="#/about">About</a></li>
+                <li><a href="#/contact">Contact</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- SEARCH BAR -->
-    <div class="row-fluid">
-      <div id="search-box-inset">
-        <div id="search-box-wrapper">
-          <div id='search-box'>
-            <form action='/search' id='search-form' method='get' target='_top'>
-              <input id='search-text' name='q' style="width:100%;" ng-model="query" placeholder='Company Name' type='text'/>
-              <button id='search-button' type='submit'><span>Search</span></button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- COMPANIES LIST -->
-    <div class="row-fluid">
-      <div ng-animate="'animate'" ng-repeat="company in companies | filter:query" class="span4">
-        <img ng-src="#/img/logos/{{company.name}}.jpg">
-        <a href="#/companies/{{company.name}}"><h2>{{company.name}}</h2></a>
-        <p>{{company.snippet }}</p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div>
-    </div>
-
-    <!-- PIE CHART -->
-    <div class="hero-unit" ng-show="query">
-      SELECTED COMPANY: {{query}}
-      <pie-chart data="chartData" width="{{chartWidth}}" height="{{chartHeight}}" select="selectRow(selectedRowIndex)"></pie-chart><br/>
-    </div>
-  </div>
-
-  <footer>
       <div class="container">
-      <p class="pull-right"><a href="">Back to Top</a></p>
-      <p>&copy; Ethicizer &middot; <a href="#/about">About</a></p>
+        <div ng-view></div>
       </div>
-  </footer>
 
-  </body>
-</html>
-
-
-
-
-
-<!-- <html lang="en" ng-app="myApp">
-<head>
-  <meta charset="utf-8">
-  <title>Ethicizer</title>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" />
-  <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <div id="page">
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">
-            <img style="margin: -3px 10px 0px 0px;" src="/img/logo.png" alt=""> Ethicizer
-          </a>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              <li><a href="#/">Home</a></li>
-              <li class="active"><a href="#/about">About</a></li>
-              <li><a href="#/contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
-
-    <div class="container">
-      <div ng-view></div>
-    </div>
-
 
     <footer>
         <div class="container">
@@ -122,12 +49,6 @@
         <p>&copy; Ethicizer &middot; <a href="#/about">About</a></p>
         </div>
     </footer>
-  </div>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-</body>
-</html> -->
+
+  </body>
+</html>
