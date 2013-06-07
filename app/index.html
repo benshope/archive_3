@@ -54,19 +54,19 @@
       </div>
     </div>
 
-
+    <!-- COMPANIES LIST -->
     <div class="row-fluid">
       <div ng-animate="'animate'" ng-repeat="company in companies | filter:query" class="span4">
-        <h2>{{company.name}}</h2>
+        <img ng-src="#/img/logos/{{company.name}}.jpg">
+        <a href="#/companies/{{company.name}}"><h2>{{company.name}}</h2></a>
         <p>{{company.snippet }}</p>
         <p><a class="btn" href="#">View details »</a></p>
       </div>
     </div>
 
-
+    <!-- PIE CHART -->
     <div class="hero-unit" ng-show="query">
       SELECTED COMPANY: {{query}}
-      <!-- PIE CHART -->
       <pie-chart data="chartData" width="{{chartWidth}}" height="{{chartHeight}}" select="selectRow(selectedRowIndex)"></pie-chart><br/>
     </div>
   </div>
