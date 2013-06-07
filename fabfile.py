@@ -11,12 +11,12 @@ def start(mode="normal"):
     """ start the local app server """
     local("dev_appserver.py .")
 
-def deploy(app_id="genetic-memorial", version="2-2"):
-    """ upload the app """
-    local("appcfg.py --oauth2 update .")
-
 def commit(m="Auto-update the app"):
     """ save the to github """
     local("git add .")
     local("git commit -m '{0}'".format(m))
     local("git push")
+
+def deploy(app_id="ethicizer", version="2-2"):
+    """ upload the app """
+    local("appcfg.py --oauth2 update .")
