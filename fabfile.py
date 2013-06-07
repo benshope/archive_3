@@ -14,7 +14,7 @@ def start(mode="normal"):
 def commit(m="Auto-update the app"):
     """ save the to github """
     local("git add .")
-    local("git commit -m '{0}'".format(m))
+    local("git commit -a -m '{0}'".format(m))
     local("git push")
 
 def deploy(app_id="ethicizer", version="2-2"):
