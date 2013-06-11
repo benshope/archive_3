@@ -15,14 +15,16 @@
 
 
 <!-- COMPANIES LIST -->
-<div class="row-fluid">
-  <div ng-animate="'animate'" ng-repeat="company in companies | filter:query" class="span4">
+
+<ul class="nav nav-pills nav-stacked">
+  <li ng-animate="'animate'" ng-repeat="company in companies | filter:query">
     <img ng-src="{{company.imageUrl}}">
     <a href="#/companies/{{company.name}}"><h2>{{company.name}}</h2></a>
     <p>{{company.snippet }}</p>
     <p><a class="btn" href="#">View details »</a></p>
-  </div>
-</div>
+  </li>
+</ul>
+
 
 <!-- PIE CHART -->
 <div class="hero-unit" ng-show="query">
