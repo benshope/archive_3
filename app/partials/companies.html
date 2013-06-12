@@ -1,27 +1,27 @@
 
 <!-- SEARCH BAR -->
 <div class="row-fluid">
-  <div id="search-box-inset">
-    <div id="search-box-wrapper">
-      <div id='search-box'>
-        <form action='/search' id='search-form' method='get' target='_top'>
-          <input id='search-text' name='q' style="width:100%;" ng-model="query" placeholder='Company Name' type='text'/>
-          <button id='search-button' type='submit'><span>Search</span></button>
-        </form>
+  <div class="span12">
+    <div id="search-box-inset">
+      <div id="search-box-wrapper">
+        <div id='search-box'>
+          <form action='/search' id='search-form' method='get' target='_top'>
+            <input id='search-text' name='q' style="width:100%;" ng-model="query" placeholder='Company Name' type='text'/>
+            <button id='search-button' type='submit'><span>Search</span></button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
+<hr>
 <!-- COMPANIES LIST -->
-
-<ul class="nav nav-pills nav-stacked">
-  <li ng-animate="'animate'" ng-repeat="company in companies | filter:query">
-    <img ng-src="{{company.imageUrl}}">
-    <a href="#/companies/{{company.name}}"><h2>{{company.name}}</h2></a>
-    <p>{{company.snippet }}</p>
-    <p><a class="btn" href="#">View details »</a></p>
+<ul class="thumbnails">
+  <li class="span2" ng-animate="'animate'" ng-repeat="company in companies | filter:query">
+    <a href="#/companies/{{company.name}}" class="thumbnail">
+        <img ng-src="{{company.imageUrl}}">
+        <h2 style="text-align:center;">{{company.name}}</h2>
+    </a>
   </li>
 </ul>
 
