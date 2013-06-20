@@ -11,7 +11,7 @@ def start(mode="normal"):
     """ start the local app server """
     local("dev_appserver.py .")
 
-def commit(m="Auto-update the app"):
+def commit(m="Fab-update the app"):
     """ save the to github """
     local("git add .")
     local("git commit -a -m '{0}'".format(m))
