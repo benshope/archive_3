@@ -25,7 +25,7 @@ body {
   padding-bottom: 20px;
   padding-top: 100px;
   color: #5a5a5a;
-  /*background: #f7f7f7 url(../img/old_wall.png) repeat center top;*/
+  background: #f7f7f7 url(../img/old_wall.png) repeat center top;
   /*INFOGRAPHIC:  http://files.www.newmediacampaigns.com/political-infographic.JPG*/
   /*background: url(http://us.123rf.com/400wm/400/400/tar07/tar071208/tar07120800089/14781648-blue-sky-background.jpg) no-repeat center center fixed;*/
   /*background-size: cover;*/
@@ -236,4 +236,16 @@ footer {
     transform: scaleY(1);
   height: 30px;
   opacity: 1;
+}
+
+.thumbnail h2 {
+  text-transform:capitalize;
+}
+
+.thumbnail {
+  background-color:#f2f2f2;
+}
+.thumbnail:hover {
+  text-decoration:none;
+  background-color:#ffffff;
 }
