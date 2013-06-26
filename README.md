@@ -1,6 +1,6 @@
-# Ethicizer - Support Good Companies
+# Ethicizer
 
-Ethicizer shows whether a company aligns with a consumer's values.  Having this data available allows consumers to vote with their wallets and change the world.
+Ethicizer shows whether a company's political leanings align with a consumer's values.  Having this data available allows consumers to vote with their wallets and change the world.
 
 ## Directory Layout
 
